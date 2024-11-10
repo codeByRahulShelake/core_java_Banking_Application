@@ -697,7 +697,7 @@ public class BankCloneApp
                                         netBankingFlag = false;
                                         break;
                                     default:
-                                        throw new AssertionError();
+                                        System.out.println("Enter valid choice.");
                                 }
                                 
 
@@ -756,12 +756,11 @@ public class BankCloneApp
             catch (IllegalArgumentException e) 
             {
                 System.out.println(e.getMessage());  // Handle invalid day/month/year ranges
-                sc.nextLine();
+                
             } 
             catch (DateTimeException e) 
             {
                 System.out.println("Invalid date! This day does not exist in this month/year. Please try again.");
-                sc.nextLine();
             }
             sc.nextLine();  // Clear the scanner buffer
         }
@@ -781,7 +780,7 @@ public class BankCloneApp
                 sc.nextLine();
                 if (UniqueInfo.aadharSet.contains(aadharNo)) 
                     System.out.println("Aadhar card already exists. Enter again.");
-                else if(String.valueOf(aadharNo).length() != 10)
+                else if(String.valueOf(aadharNo).length() != 12)
                     System.out.println("Enter valid Aadhar (i.e 12 digit)");
                 else
                     aadharFlag = false;
@@ -830,7 +829,7 @@ public class BankCloneApp
             System.out.println("Enter Email Id : ");
             email = sc.nextLine();
 
-            if(email.endsWith(".co"))
+            if(email.endsWith("@gmail.com"))
                 flag = false;
             else
                 System.out.println("Enter valid Email Id (i.e. ends with .co)");
