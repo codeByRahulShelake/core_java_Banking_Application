@@ -1,0 +1,9 @@
+# Ignore all .class files
+*.class
+
+# Ignore IDE-specific files (e.g., IntelliJ, Eclipse)
+.idea/
+.vscode/
+
+# Ignore build output
+/build/
