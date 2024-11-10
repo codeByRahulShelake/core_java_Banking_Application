@@ -632,7 +632,7 @@ public class BankCloneApp
                                     System.out.println();
                                     System.out.println("-----------------------------------------------------------------------------------------------");
                                     System.out.println();
-                                    System.out.println("1: Display Account Info | 2: Deposit Amount | 3: Withdraw Amount \n4: Transfer Amount | 5: Transaction History | 6: Log out ");
+                                    System.out.println("1: Display Account Info | 2: Deposit Amount | 3: Withdraw Amount \n4: Transfer Amount | 5: Transaction History | 6 : Change Password | 7: Log out ");
                                     choice = sc.nextInt();
                                     sc.nextLine();   
                                 }
@@ -694,6 +694,12 @@ public class BankCloneApp
                                         break;
 
                                     case 6:
+                                        System.out.println("Enter new Password : ");
+                                        String newPass = sc.nextLine();
+                                        actions.updatePassword(newPass);
+                                        break;
+
+                                    case 7:
                                         netBankingFlag = false;
                                         break;
                                     default:
@@ -733,17 +739,17 @@ public class BankCloneApp
         {
             try 
             {
-                System.out.print("Enter day (1-31): ");
+                System.out.print("Enter Birth day (1-31): ");
                 day = sc.nextInt();
                 if (day < 1 || day > 31) 
                     throw new IllegalArgumentException("Invalid day! Please enter a day between 1 and 31.");
                             
-                System.out.print("Enter month (1-12): ");
+                System.out.print("Enter Birth month (1-12): ");
                 month = sc.nextInt();
                 if (month < 1 || month > 12) 
                     throw new IllegalArgumentException("Invalid month! Please enter a month between 1 and 12.");
                                             
-                System.out.print("Enter year (e.g., 1990): ");
+                System.out.print("Enter Birth year (e.g., 1990): ");
                 year = sc.nextInt();
                 if (year < 1900 || year > LocalDate.now().getYear()) 
                     throw new IllegalArgumentException("Invalid year! Please enter a realistic year.");
@@ -832,7 +838,7 @@ public class BankCloneApp
             if(email.endsWith("@gmail.com"))
                 flag = false;
             else
-                System.out.println("Enter valid Email Id (i.e. ends with .co)");
+                System.out.println("Enter valid Email Id (i.e. ends with @gmail.com)");
         }
         return email;
     }

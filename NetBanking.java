@@ -132,6 +132,12 @@ class NetBanking
             info.getTransactionHistory(info.getAccNo(), accounts);
         }
 
+        public void updatePassword(String newPass)
+        {
+            info.setNetBankingPass(newPass);
+            System.out.println("Net Banking Password Updated. : "+info.getNetBankingPass());
+        }
+
         public void logOut()
         {
             valid = false;
