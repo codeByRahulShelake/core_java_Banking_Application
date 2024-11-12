@@ -103,11 +103,12 @@ class BankAccount // class to maintain actual bank system
                 iterator.remove(); // Remove the account from the ArrayList
                 UniqueInfo.aadharSet.remove(account.aadharNo); // Also remove from unique sets
                 UniqueInfo.accNoSet.remove(account.accNo);
+                UniqueInfo.netBankingIdSet.remove(account.netBankingId);
                 found = true;
                 System.out.println("Account deleted successfully for Account No: " + delAccNo);
                 break;
             }
-        }
+        }     
         if (!found)
             System.out.println("No account found with Account No: " + delAccNo);
     }
