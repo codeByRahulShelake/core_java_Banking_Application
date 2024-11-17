@@ -78,14 +78,16 @@ The **Core Java Banking Application** is a simple, console-based banking system 
 To clone the repository, run the following command:
 ```bash
 git clone https://github.com/codeByRahulShelake/core_java_Banking_Application.git
-
-2. Run the Application
+````
+### 2. Run the application
 To run the banking application, navigate to the project directory and execute the BankCloneApp class using your Java IDE or the command line:
 
-bash
+
 Copy code
+```bash
 java BankCloneApp
-3. Interact with the Application
+```
+### 3. Interact with the application
 Follow the prompts on the console to create an account, log in, and manage your account and transactions.
 
 Contributions
